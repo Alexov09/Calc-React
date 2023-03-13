@@ -1,13 +1,36 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #febb74 , #ff5b70);
 }
 
 .content {
     position: relative;
-    z-index: 2;
-  }
+    z-index: 100;
+}
+
+.background-gradient{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 20;
+    background: linear-gradient(to bottom right,  #ff2c8d , #febb74 );
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.background-image{
+    opacity: 0.5;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url(img/bakcground.png);
+    background-size: contain ;
+    z-index: 10;
+}
   
 .container{
     max-width: 1280px;
@@ -21,30 +44,36 @@ body{
 
 .row{
     display: flex;
+    justify-content: space-around;
 }
 
-
-.logo-elem{
-    margin-left: 25px;
-
-    .logo-elem_small-fontsize{
-        font-style: italic;
-        font-size: 35px;
-    }
-    .logo-elem_big-fontsize{
-        font-style: bold;
-        line-height: 60px;
-        font-size: 100px;
-    }
+.logo-elem_small-fontsize{
+    font-style: italic;
+    font-size: 35px;
 }
 
+.logo-elem_big-fontsize{
+    font-style: bold;
+    line-height: 60px;
+    font-size: 100px;
+}
 
 main{
     margin-top: 50px;
-    .phone{
+
+    .article{
         width: 400px;
+        color: rgb(60, 64, 66);
+        text-align: end;
+
+        .title{
+            font-size: 60px;
+        }
+    }
+
+    .phone{
+        width: 390px;
         height: 750px;
-        margin-left: 200px;
         border: 6px solid #0e1422;
         border-radius: 50px;
         background-color: #1e324b;
@@ -109,6 +138,7 @@ main{
         .phone-main{
             margin-top: 70px;
             margin-bottom: 70px;
+
             .phone-main_container{
                 width: 350px;
                 margin: 0 auto;
@@ -120,6 +150,7 @@ main{
                         font-size: 40px;
                         text-align: end;
                     }
+
                     .result{
                         font-size: 20px;
                         text-align: end;
@@ -130,14 +161,12 @@ main{
             .phone-main_buttons-field{
                 height: 450px;
                 
-
                 .buttons-row{
                     width: 100%;
                     height: 20%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-
 
                     .calc-btn-general{
                         background-color: inherit;
@@ -151,21 +180,26 @@ main{
                             opacity: 0.2;
                         }
                     }
+
                     .full-calc-btn, .all-clear-btn, .one-clear-btn{
                         width: 30%;
                         background-color: #1b2b44;
                     }
+
                     .operation-btn{
                         background:linear-gradient(to bottom right, #febb74 , #ff5b70);
                         color: white;
                     }
+
                     .calc-btn__width{
                         width: 66px;
                     }
+
                     .equal-btn{
                         background:linear-gradient(to bottom right, #f880ab , #ff2c8d);
                         color: white;
                     }
+
                     .dot-btn{
                         line-height: 0px;
 
@@ -174,6 +208,7 @@ main{
                             width: 35px;
                         }
                     }
+
                     .brackets-btn{
                         background-color: #1b2b44;
                     }
